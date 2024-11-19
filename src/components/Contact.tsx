@@ -26,39 +26,41 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+  
     if (!validateForm()) {
       return;
     }
-
+  
+    // Clear fields and show confirmation immediately
+    setFormData({ name: '', email: '', message: '' });
+    setSubmitStatus('Thank you for your message!');
+  
     try {
-      // Store data in localStorage as a simple storage solution
-      const existingData = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-      const newSubmission = {
-        ...formData,
-        timestamp: new Date().toISOString()
-      };
-      existingData.push(newSubmission);
-      localStorage.setItem('contactSubmissions', JSON.stringify(existingData));
-
-      // Show success message
+      // Send the request to the server
+      await fetch(
+        'https://script.google.com/macros/s/AKfycbwhSWjR77F6gUKrodkkebshgNbla6zt45hm7jjmOuRQYQ3EgUVtk53pn5RdfzkjnGPG/exec',
+        {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+  
+      // Update the status after submission
       setSubmitStatus('Message sent successfully!');
-
-      // Clear form
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
-
-      // Clear success message after 3 seconds
-      setTimeout(() => {
-        setSubmitStatus('');
-      }, 3000);
     } catch (error) {
       setSubmitStatus('Failed to send message. Please try again.');
+    } finally {
+      // Clear the status after a short delay
+      setTimeout(() => setSubmitStatus(''), 1000);
     }
   };
+  
+  
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -95,12 +97,8 @@ const Contact = () => {
                 pankajvk211@gmail.com
               </a>
               <a
-                href="tel:+916307386578"
-                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                <Phone className="mr-3" size={20} />
-                +91 6307386578
-              </a>
+                href="tel:+918800000000"
+                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"></a>
               <div className="flex items-center text-gray-600">
                 <MapPin className="mr-3" size={20} />
                 New Delhi, India
@@ -128,9 +126,8 @@ const Contact = () => {
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               {submitStatus && (
-                <div className={`p-3 rounded-md ${
-                  submitStatus.includes('success') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
-                }`}>
+                <div className={`p-3 rounded-md ${submitStatus.includes('success') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+                  }`}>
                   {submitStatus}
                 </div>
               )}
@@ -144,9 +141,8 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`mt-1 block w-full rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 ${
-                    errors.name ? 'border-red-300' : 'border-gray-300'
-                  }`}
+                  className={`mt-1 block w-full rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 ${errors.name ? 'border-red-300' : 'border-gray-300'
+                    }`}
                 />
                 {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
               </div>
@@ -160,9 +156,8 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`mt-1 block w-full rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 ${
-                    errors.email ? 'border-red-300' : 'border-gray-300'
-                  }`}
+                  className={`mt-1 block w-full rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 ${errors.email ? 'border-red-300' : 'border-gray-300'
+                    }`}
                 />
                 {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
               </div>
@@ -176,9 +171,8 @@ const Contact = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className={`mt-1 block w-full rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 ${
-                    errors.message ? 'border-red-300' : 'border-gray-300'
-                  }`}
+                  className={`mt-1 block w-full rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 ${errors.message ? 'border-red-300' : 'border-gray-300'
+                    }`}
                 ></textarea>
                 {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
               </div>
