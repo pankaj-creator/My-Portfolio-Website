@@ -9,10 +9,11 @@ const projects = [
     company: 'TCS',
     description: 'Led the configuration of advanced manufacturing workflows utilizing Tulip, achieving significant improvements in processing time and efficiency.',
     achievements: [
-      'Streamlined integration processes across five different software applications',
-      'Reduced processing time by 20% for production orders',
-      'Reduced application downtime by 60% through proactive issue identification',
-      'Automated repetitive tasks, resulting in 30% reduction in manual effort'
+      'Streamlined integration processes across five disparate software applications.',
+      'Reduced production order processing time by 20%.',
+      'Decreased application downtime by 30% through proactive issue resolution.',
+      'Automated repetitive tasks, leading to a 70% reduction in manual effort.',
+      'Successfully integrated multiple APIs to deliver seamless user experiences and meet business requirements.',
     ],
     link: '#tulip-pharma'
   },
@@ -22,12 +23,39 @@ const projects = [
     company: 'TCS',
     description: 'Played a crucial role in modernizing the NYSDOL portal, leading to significant improvements in system performance and efficiency.',
     achievements: [
-      'Improved system performance by 40%',
-      'Led module team to achieve project goals ahead of schedule',
-      'Reduced application downtime by 25%',
-      'Earned multiple awards for exceptional contributions'
+      'Spearheaded the modernization of the NYSDOL portal, resulting in significant performance and efficiency gains.',
+      'Led a dedicated module team to successfully complete project milestones ahead of schedule.',
+      'Reduced application downtime, ensuring seamless user experience.',
+      'Demonstrated expertise in Angular, Google Cloud Platform, and Spring Boot to develop robust and scalable solutions.',
+      'Successfully integrated multiple APIs and microservices to create a seamless user experience.',
     ],
     link: '#nysdol-ui'
+  },
+  {
+    title: 'Virtual Lab Development',
+    period: 'July 2020 - Sept 2020',
+    company: 'IIT Kanpur & Ministry of Education',
+    description: 'Created a robust virtual lab platform to enable remote access to laboratory experiments for students nationwide.',
+    achievements: [
+      'Successfully developed and deployed four virtual labs for engineering students.',
+      'Lab platform was adopted by 10+ universities across India, during Covid19 Pandemic',
+      'Lab contiinueLab continues to benefit engineering students across the nation.',
+      'Received the prestigious Gold Developer Certificate',
+    ],
+    link: '#virtual-lab'
+  },
+  {
+    title: 'Experimental Project on DAE Algorithm',
+    period: 'Aug 2021 - Apr 2022',
+    company: 'Dr. APJ Abdul Kalam University, Lucknow',
+    description: 'Design and Implement an algorithm for association rule mining, using concept of DAE (Denoising AutoEncoders) algorithm',
+    achievements: [
+      'Successfully implemented an ANN-based approach for association rule mining.',
+      'Developed a denoising algorithm to improve computational efficiency.',
+      'Leveraged Python, TensorFlow, Keras, and advanced data mining algorithms to implement this algorithm.',
+      'Contributed to in data mining research, through this experimental project',
+    ],
+    link: '#DEAM-Algorithm'
   }
 ];
 

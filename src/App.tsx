@@ -10,6 +10,7 @@ import Awards from './components/Awards';
 import Additional from './components/Additional';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Projects />
         <Awards />
         <Additional />
+        <ScrollToTop />
         <Contact />
       </main>
       <Footer />

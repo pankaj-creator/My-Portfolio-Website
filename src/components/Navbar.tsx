@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+//import { Link } from 'react-scroll';
+import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +58,19 @@ const Navbar = () => {
               </motion.a>
             ))}
           </div>
+          <div className="hidden md:flex items-center space-x-4">
+            <a href="https://github.com/pankaj-creator" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition-colors">
+              <Github size={20} />
+            </a>
+            <a href="https://www.linkedin.com/in/pankaj-kumar-gond/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition-colors">
+              <Linkedin size={20} />
+            </a>
+            <a href="mailto:pankajvk211@gmail.com" className="hover:text-purple-600 transition-colors">
+              <Mail size={20} />
+            </a>
+          </div>
 
+          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <motion.button
               whileTap={{ scale: 0.95 }}
@@ -90,6 +103,17 @@ const Navbar = () => {
                 {item}
               </motion.a>
             ))}
+          </div>
+          <div className="flex justify-center space-x-4 pb-4">
+            <a href="https://github.com/pankaj-creator" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition-colors">
+              <Github size={20} />
+            </a>
+            <a href="https://www.linkedin.com/in/pankaj-kumar-gond/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition-colors">
+              <Linkedin size={20} />
+            </a>
+            <a href="mailto:pankajvk211@gmail.com" className="hover:text-purple-600 transition-colors">
+              <Mail size={20} />
+            </a>
           </div>
         </motion.div>
       )}
