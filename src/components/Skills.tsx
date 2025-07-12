@@ -2,24 +2,24 @@ import React from 'react';
 
 const skillCategories = [
   {
-    title: 'Programming Languages',
-    skills: ['Java', 'Python', 'JavaScript', 'C++']
+    title: 'Frontend Development',
+    skills: ['React.js', 'Angular', 'Redux Toolkit', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
+    color: 'blue'
   },
   {
-    title: 'Web Development',
-    skills: ['Angular', 'React.js', 'HTML', 'CSS']
+    title: 'Backend & Database',
+    skills: ['Java', 'Spring Boot', 'Python', 'Node.js', 'SQL', 'MongoDB', 'PostgreSQL', 'IBM DB2'],
+    color: 'green'
   },
   {
-    title: 'Database Management',
-    skills: ['SQL', 'MySQL', 'MongoDB', 'IBM DB2', 'PostgreSQL']
+    title: 'Cloud & DevOps',
+    skills: ['AWS', 'GCP', 'Azure', 'CI/CD', 'Jenkins', 'Docker', 'GitLab', 'SonarQube'],
+    color: 'purple'
   },
   {
-    title: 'Cloud Technologies',
-    skills: ['GCP', 'AWS', 'Microsoft Azure']
-  },
-  {
-    title: 'CI/CD & DevOps',
-    skills: ['CI/CD Pipelines', 'Git/GitHub', 'Version Control', 'Cloud DevOps']
+    title: 'Tools & Technologies',
+    skills: ['Git/GitHub', 'Tulip Platform', 'API Integration', 'TensorFlow', 'Fortify', 'RTK Query'],
+    color: 'orange'
   }
 ];
 
@@ -30,20 +30,31 @@ const Skills = () => {
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           Technical Skills
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all border border-gray-100"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                <div className={`w-3 h-3 rounded-full mr-3 ${
+                  category.color === 'blue' ? 'bg-blue-500' :
+                  category.color === 'green' ? 'bg-green-500' :
+                  category.color === 'purple' ? 'bg-purple-500' :
+                  'bg-orange-500'
+                }`}></div>
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                    className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                      category.color === 'blue' ? 'bg-blue-100 text-blue-800 hover:bg-blue-200' :
+                      category.color === 'green' ? 'bg-green-100 text-green-800 hover:bg-green-200' :
+                      category.color === 'purple' ? 'bg-purple-100 text-purple-800 hover:bg-purple-200' :
+                      'bg-orange-100 text-orange-800 hover:bg-orange-200'
+                    }`}
                   >
                     {skill}
                   </span>

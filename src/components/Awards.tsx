@@ -5,19 +5,22 @@ import AnimatedSection from './AnimatedSection';
 
 const awards = [
   {
-    title: 'Golden Developer Certificate',
-    organization: 'IIT Kanpur/AKTU Lucknow',
-    description: 'Awarded for outstanding contributions to virtual lab development project.'
+    title: 'Gold Developer Certificate',
+    organization: 'IIT Kanpur',
+    year: '2020',
+    description: 'Outstanding contribution to virtual lab development during COVID-19.'
   },
   {
-    title: 'On The Spot Award',
+    title: 'On-the-Spot Awards (2x)',
     organization: 'TCS',
-    description: 'Received twice for exceptional performance and contributions.'
+    year: '2023',
+    description: 'Exceptional performance and leadership in NYSDOL project.'
   },
   {
-    title: 'Best Team Award',
+    title: 'Best Team Performance',
     organization: 'TCS',
-    description: 'Recognized for outstanding team collaboration and project success.'
+    year: '2024',
+    description: 'Outstanding collaboration and project delivery excellence.'
   }
 ];
 
@@ -43,11 +46,13 @@ const Awards = () => {
                     <Trophy className="w-8 h-8 text-blue-600" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-center text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-center text-gray-900 mb-1">
                   {award.title}
                 </h3>
-                <p className="text-blue-600 text-center mb-2">{award.organization}</p>
-                <p className="text-gray-600 text-center">{award.description}</p>
+                <p className="text-blue-600 text-center font-medium mb-1">
+                  {award.organization} • {award.year}
+                </p>
+                <p className="text-gray-600 text-center text-sm">{award.description}</p>
               </motion.div>
             </AnimatedSection>
           ))}

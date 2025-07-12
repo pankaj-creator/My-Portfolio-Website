@@ -10,13 +10,13 @@ const projects = [
     company: 'TCS',
     role: 'Senior UI Developer',
     techStack: ['React.js', 'Redux Toolkit', 'GitLab', 'Jenkins', 'CI/CD'],
-    description: 'Leading UI development for India national procurement platform serving millions of users.',
+    description: 'Leading UI development for India's national procurement platform serving millions of users.',
     keyImpacts: [
       'Built real-time notification system for government procurement',
       'Implemented CI/CD pipelines reducing deployment time by 50%',
       'Achieved 99.9% uptime with robust error handling'
     ],
-    metrics: '10M+ users • High-volume transactions',
+    metrics: '10M+ users • ₹5L+ Cr transactions',
     status: 'Production'
   },
   {

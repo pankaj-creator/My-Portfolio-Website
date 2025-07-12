@@ -16,21 +16,36 @@ const About = () => {
             />
           </div>
           <div>
-            <p className="text-gray-600 mb-6">
-              I'm a dedicated Full Stack Developer with a passion for creating high-performance,
-              user-friendly web applications. Currently working at Tata Consultancy Services
-              as a System Engineer, I bring extensive experience in both front-end and back-end
-              development.
-            </p>
-            <p className="text-gray-600 mb-6">
-              With expertise in technologies like Angular, React, Java, and Cloud platforms
-              (AWS, GCP, Azure), I focus on delivering scalable solutions that drive business
-              growth and enhance user experiences.
-            </p>
-            <p className="text-gray-600">
-              I'm committed to continuous learning and staying current with the latest industry
-              trends and technologies to deliver innovative solutions.
-            </p>
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Professional Summary</h3>
+              <p className="text-gray-600 mb-4">
+                Senior Full Stack Developer with 3+ years at Tata Consultancy Services, 
+                specializing in React.js, Angular, and cloud technologies. Led high-impact 
+                projects including India's national procurement platform (GeM 2.0) and 
+                manufacturing automation systems.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Key Strengths</h4>
+                <ul className="text-gray-600 space-y-1 text-sm">
+                  <li>• Frontend Performance Optimization</li>
+                  <li>• Team Leadership & Mentoring</li>
+                  <li>• CI/CD Pipeline Implementation</li>
+                  <li>• Cross-functional Collaboration</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Impact Delivered</h4>
+                <ul className="text-gray-600 space-y-1 text-sm">
+                  <li>• 40% performance improvements</li>
+                  <li>• 30% reduction in downtime</li>
+                  <li>• 70% automation of manual tasks</li>
+                  <li>• Led teams of 10+ developers</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

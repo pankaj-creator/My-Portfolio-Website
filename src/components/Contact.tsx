@@ -80,9 +80,15 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-          Get In Touch
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Let's Work Together
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Ready to bring your ideas to life? I'm open to discussing new opportunities, 
+            collaborations, and exciting projects. Let's connect and create something amazing!
+          </p>
+        </div>
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -98,7 +104,11 @@ const Contact = () => {
               </a>
               <a
                 href="tel:+918800000000"
-                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"></a>
+                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+                title="Call me"
+              >
+                <span>+91 8800000000</span>
+              </a>
               <div className="flex items-center text-gray-600">
                 <MapPin className="mr-3" size={20} />
                 New Delhi, India
@@ -109,6 +119,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
+                  title="Visit my GitHub profile"
                 >
                   <Github size={24} />
                 </a>
@@ -117,6 +128,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
+                  title="Visit my LinkedIn profile"
                 >
                   <Linkedin size={24} />
                 </a>

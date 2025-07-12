@@ -13,17 +13,27 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-5xl md:text-6xl font-bold text-gray-900 mb-6"
           >
-            Full Stack Developer
+            Pankaj Kumar Gond
           </motion.h1>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-2xl md:text-3xl font-semibold text-blue-600 mb-4"
+          >
+            Senior Full Stack Developer
+          </motion.h2>
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
           >
-            Crafting robust and scalable web applications with modern technologies.
-            Passionate about creating exceptional user experiences.
+            3+ years at TCS • React.js & Java Expert • Cloud Technologies Specialist
+            <br />
+            Building scalable applications that drive business growth and user engagement
           </motion.p>
           
           <motion.div

@@ -1,39 +1,92 @@
-# Pankaj Kumar's Portfolio 🌟
+# Pankaj Kumar Gond - Portfolio Website
 
-Welcome to my portfolio! Explore my journey as a **Full Stack Developer**, my skills, projects, and professional achievements.
+A modern, professional portfolio website showcasing full-stack development skills, experience, and projects.
 
-## 👨‍💻 About Me
-I am a **Full Stack Developer** passionate about crafting robust, scalable, and high-performance web applications. My expertise lies in creating exceptional user experiences through modern technologies and design principles.
+## 🚀 Recent Improvements
 
-Currently, I am working as a **System Engineer** at **Tata Consultancy Services (TCS)**, where I leverage my skills in front-end and back-end development, cloud computing, and DevOps to deliver impactful solutions. With a commitment to continuous learning, I strive to stay ahead in the ever-evolving tech world.
+### Design & User Experience
+- **Modern Hero Section**: Added personal name, clear role positioning, and key metrics
+- **Enhanced Typography**: Implemented Inter font family for better readability
+- **Improved Layout**: Better spacing, modern card designs with gradients and shadows
+- **Professional Color Scheme**: Consistent blue-based color palette with proper contrast
+- **Responsive Design**: Optimized for all device sizes
+
+### Content Optimization for Recruiters
+- **Quantified Achievements**: Added specific metrics (40% performance improvement, 10M+ users, etc.)
+- **Clear Role Progression**: Emphasized leadership experience and technical growth
+- **Project Impact Focus**: Highlighted business impact and technical achievements
+- **Concise Professional Summary**: Brief, impactful descriptions that grab attention
+- **Technology Stack Clarity**: Better organized and categorized technical skills
+
+### Technical Enhancements
+- **Performance Optimizations**: Improved loading times and animations
+- **Better Code Organization**: Cleaner component structure and maintainable code
+- **Enhanced Accessibility**: Proper ARIA labels and semantic HTML
+- **Professional Contact Section**: Improved call-to-action and contact information layout
 
 ## 🛠️ Tech Stack
-- **Front-End**: React, JavaScript/TypeScript, HTML, CSS
-- **Back-End**: Java, Node.js
-- **Database**: MySQL, MongoDB
-- **Cloud & DevOps**: CI/CD pipelines, Cloud technologies (AWS, Azure)
-- **Other Tools**: Git, Postman, Docker, Tulip
 
-## 🌟 Highlights
-- **Award-Winning Developer**: Received the prestigious **Gold Developer Certificate and Award** for contributions to Virtual Lab Development, an initiative by the Ministry of Education during COVID-19.
-- **Problem Solver**: Participated in eBOOTATHON 03 and successfully developed virtual lab experiments, showcasing my ability to solve real-world problems through technology.
-- **Team Player**: Demonstrated leadership and collaboration skills by improving Git merge strategies for better team integration.
+- **Frontend**: React.js, TypeScript, Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **Deployment**: Ready for Vercel/Netlify
 
-## 🚀 Portfolio Features
-- **Interactive Projects**: Showcase of real-world applications I’ve built, emphasizing usability and scalability.
-- **Professional Experience**: Detailed overview of my roles, achievements, and contributions.
-- **Contact Information**: Easy-to-use contact form for collaborations and inquiries.
+## 🎯 Key Features
+
+### For Recruiters
+- Clear value proposition in hero section
+- Quantified impact metrics throughout
+- Professional project showcase with business outcomes
+- Easy-to-scan technical skills organization
+- Direct contact information and call-to-action
+
+### Technical Excellence
+- Modern React patterns with TypeScript
+- Responsive design with Tailwind CSS
+- Smooth animations and interactions
+- Clean, maintainable code structure
+- Performance-optimized components
+
+## 📊 Project Highlights
+
+1. **GeM 2.0**: Government e-Marketplace (10M+ users)
+2. **Tulip Manufacturing**: 70% automation, 20% efficiency improvement  
+3. **NYSDOL Portal**: 40% performance boost, team leadership
+4. **Virtual Labs**: 10K+ students supported during COVID-19
+
+## 🏆 Recognition
+- Gold Developer Certificate (IIT Kanpur)
+- 2x On-the-Spot Awards (TCS)
+- Best Team Performance Award
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
 
 ## 🌐 Live Demo
-Visit my portfolio: [erpankaj.netlify.app](https://erpankaj.netlify.app)
+Visit the portfolio: [Portfolio Website](https://erpankaj.netlify.app)
 
-## 📫 Let's Connect
-Feel free to reach out to me for collaborations, freelance projects, or tech discussions:
+## 📧 Contact
+
+**Pankaj Kumar Gond**
 - Email: pankajvk211@gmail.com
-- LinkedIn: [Pankaj Kumar Gond](https://www.linkedin.com/in/pankaj-kumar-gond/)
-- GitHub: [github.com/pankaj-creator](https://github.com/pankaj-creator)
+- LinkedIn: [pankaj-kumar-gond](https://linkedin.com/in/pankaj-kumar-gond)
+- GitHub: [pankaj-creator](https://github.com/pankaj-creator)
+- Location: New Delhi, India
 
 ---
 
-Thank you for visiting my portfolio. Let’s create something amazing together!
-
+*Built with ❤️ using React, TypeScript, and Tailwind CSS*
