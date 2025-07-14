@@ -48,7 +48,9 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a></li>
               <li><a href="#experience" className="text-gray-400 hover:text-white transition-colors">Experience</a></li>
+              <li><a href="#skills" className="text-gray-400 hover:text-white transition-colors">Skills</a></li>
               <li><a href="#projects" className="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+              <li><a href="#resume" className="text-gray-400 hover:text-white transition-colors">Resume</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -56,8 +58,21 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Let's Connect</h4>
-            <p className="text-gray-400 mb-2">📧 pankajvk211@gmail.com</p>
-            <p className="text-gray-400 mb-4">📍 New Delhi, India</p>
+             <a
+                href="mailto:pankajvk211@gmail.com"
+                className="text-gray-400 mb-2"
+                aria-label="Email"
+              >
+              📧 pankajvk211@gmail.com
+            </a>
+            <p className="text-gray-400 mb-2">📍 New Delhi, India</p>
+            <a 
+              href="/Pankaj_Kumar_Gond_Resume.pdf" 
+              download="Pankaj_Kumar_Gond_Resume.pdf"
+              className="inline-block text-blue-400 hover:text-blue-300 transition-colors mb-4 text-sm"
+            >
+              📄 Download Resume (ATS-Friendly)
+            </a>
             <p className="text-sm text-gray-500">
               Open for new opportunities and exciting collaborations
             </p>

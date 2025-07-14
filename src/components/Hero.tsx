@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronDown, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -35,6 +35,31 @@ const Hero = () => {
             <br />
             Building scalable applications that drive business growth and user engagement
           </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12"
+          >
+            <motion.a
+              href="#contact"
+              className="px-8 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact Me
+            </motion.a>
+            <motion.a
+              href="#resume"
+              className="px-8 py-3 bg-white border border-blue-600 text-blue-600 rounded-lg shadow-lg hover:bg-blue-50 transition-colors flex items-center justify-center"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FileText size={18} className="mr-2" />
+              View Resume
+            </motion.a>
+          </motion.div>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}

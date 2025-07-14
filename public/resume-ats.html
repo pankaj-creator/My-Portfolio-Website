@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pankaj Kumar Gond - ATS Resume</title>
+  <style>
+    /* ATS-Optimized Resume Styles */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', 'Arial', sans-serif;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #000;
+      background: #fff;
+      padding: 0.5in;
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+    
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin-bottom: 20pt;
+      border-bottom: 1pt solid #000;
+      padding-bottom: 10pt;
+    }
+    
+    .header h1 {
+      font-size: 16pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1pt;
+      margin-bottom: 8pt;
+    }
+    
+    .contact-info {
+      font-size: 10pt;
+      line-height: 1.3;
+    }
+    
+    .contact-row {
+      margin-bottom: 3pt;
+    }
+    
+    /* Section Headers */
+    .section {
+      margin-bottom: 16pt;
+    }
+    
+    .section-title {
+      font-size: 12pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5pt;
+      border-bottom: 1pt solid #333;
+      padding-bottom: 2pt;
+      margin-bottom: 8pt;
+    }
+    
+    /* Content Styles */
+    .summary-text {
+      text-align: justify;
+      margin-bottom: 8pt;
+    }
+    
+    .skills-grid {
+      margin-bottom: 4pt;
+    }
+    
+    .skill-category {
+      margin-bottom: 4pt;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .skill-label {
+      font-weight: 600;
+      min-width: 100pt;
+      display: inline-block;
+    }
+    
+    .skill-items {
+      flex: 1;
+    }
+    
+    /* Experience & Projects */
+    .experience-item, .project-item {
+      margin-bottom: 12pt;
+      page-break-inside: avoid;
+    }
+    
+    .job-title, .project-title {
+      font-weight: 700;
+      font-size: 11pt;
+      margin-bottom: 2pt;
+    }
+    
+    .job-company, .project-client {
+      font-weight: 600;
+      margin-bottom: 2pt;
+    }
+    
+    .job-meta, .project-meta {
+      font-size: 10pt;
+      color: #333;
+      margin-bottom: 4pt;
+    }
+    
+    .achievement-list {
+      margin-left: 16pt;
+      margin-top: 4pt;
+    }
+    
+    .achievement-list li {
+      margin-bottom: 2pt;
+      text-align: justify;
+    }
+    
+    /* Education & Certifications */
+    .education-item {
+      margin-bottom: 6pt;
+    }
+    
+    .degree {
+      font-weight: 600;
+    }
+    
+    .institution {
+      font-size: 10pt;
+      color: #333;
+    }
+    
+    .cert-list, .award-list {
+      margin-left: 16pt;
+      margin-top: 4pt;
+    }
+    
+    .cert-list li, .award-list li {
+      margin-bottom: 2pt;
+    }
+    
+    /* Print Optimization */
+    @media print {
+      body {
+        padding: 0.3in;
+        font-size: 10pt;
+      }
+      
+      .section {
+        margin-bottom: 14pt;
+      }
+      
+      .experience-item, .project-item {
+        page-break-inside: avoid;
+        margin-bottom: 10pt;
+      }
+    }
+    
+    /* No page breaks within important sections */
+    .header, .section-title, .experience-item, .project-item {
+      page-break-inside: avoid;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Contact Information -->
+  <header class="header">
+    <h1>Pankaj Kumar Gond</h1>
+    <div class="contact-info">
+      <div class="contact-row">Email: pankajvk211@gmail.com | Phone: +91 6307386578</div>
+      <div class="contact-row">Portfolio: erpankaj.netlify.app | LinkedIn: linkedin.com/in/pankaj-kumar-gond</div>
+      <div class="contact-row">Location: New Delhi, India</div>
+    </div>
+  </header>
+
+  <!-- Professional Summary -->
+  <section class="section">
+    <h2 class="section-title">Professional Summary</h2>
+    <div class="summary-text">
+      Experienced Full-Stack Developer with 3+ years at Tata Consultancy Services, specializing in government and enterprise platform development. Expert in React.js, Java, Spring Boot, AWS, and CI/CD methodologies. Proven track record in building scalable, event-driven microservices and driving architectural improvements. Achieved 30% reduction in release cycles, 20% improvement in API performance, and recognized for leading cross-functional initiatives that enhanced system reliability and user experience.
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section class="section">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <span class="skill-label">Frontend:</span>
+        <span class="skill-items">React.js, Redux, Redux Toolkit, Angular, JavaScript ES6+, HTML5, CSS3, Responsive Design</span>
+      </div>
+      <div class="skill-category">
+        <span class="skill-label">Backend:</span>
+        <span class="skill-items">Java, Spring Boot, Spring Framework, Node.js, RESTful APIs, Microservices</span>
+      </div>
+      <div class="skill-category">
+        <span class="skill-label">Databases:</span>
+        <span class="skill-items">MySQL, IBM DB2, Amazon RDS, Database Design, Query Optimization</span>
+      </div>
+      <div class="skill-category">
+        <span class="skill-label">Cloud & DevOps:</span>
+        <span class="skill-items">AWS (S3, Lambda, SQS), Google Cloud Platform, Jenkins, GitLab CI/CD, Docker</span>
+      </div>
+      <div class="skill-category">
+        <span class="skill-label">Tools & Methods:</span>
+        <span class="skill-items">Git, GitHub, GitLab, Postman, Jira, SonarQube, Fortify, Agile, Scrum</span>
+      </div>
+      <div class="skill-category">
+        <span class="skill-label">Architecture:</span>
+        <span class="skill-items">Event-Driven Systems, API Design, Performance Optimization, Code Review</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience -->
+  <section class="section">
+    <h2 class="section-title">Professional Experience</h2>
+    
+    <div class="experience-item">
+      <div class="job-title">System Engineer</div>
+      <div class="job-company">Tata Consultancy Services (TCS)</div>
+      <div class="job-meta">New Delhi, India | July 2022 – Present</div>
+      <div class="job-meta">Technologies: React.js, Java, Spring Boot, MySQL, AWS, GCP, GitLab, Redux, REST APIs</div>
+      <ul class="achievement-list">
+        <li>Developed and maintained full-stack applications with optimized RESTful APIs, achieving 20% reduction in response latency through performance tuning and database optimization</li>
+        <li>Built modular notification engine supporting multiple delivery channels (email, SMS, push) using React.js, Redux Toolkit, and event-driven architecture</li>
+        <li>Integrated cloud services with AWS (S3, Lambda, SQS) to enable scalable, fault-tolerant microservices architecture supporting high-volume government transactions</li>
+        <li>Automated CI/CD pipelines using Google Cloud Platform and GitLab, improving deployment efficiency and reducing release cycles by 30%</li>
+        <li>Collaborated with cross-functional teams in Agile environment to deliver features meeting functional requirements and quality standards</li>
+        <li>Conducted code reviews and implemented best practices, resulting in 25% reduction in production bugs</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Key Projects -->
+  <section class="section">
+    <h2 class="section-title">Key Projects</h2>
+    
+    <div class="project-item">
+      <div class="project-title">Government e-Marketplace (GeM 2.0) - React Developer</div>
+      <div class="project-client">Client: Ministry of Commerce, Government of India</div>
+      <div class="project-meta">Technologies: React.js, Redux, REST APIs, GitLab CI/CD, Microservices</div>
+      <ul class="achievement-list">
+        <li>Developed comprehensive notification module supporting email, SMS, and in-app notifications using React.js and Redux Toolkit</li>
+        <li>Integrated secure REST APIs with authentication and authorization mechanisms for government procurement platform</li>
+        <li>Collaborated with backend teams to design API contracts and ensure seamless data flow across microservices</li>
+        <li>Participated in Agile ceremonies and delivered features within tight government project timelines</li>
+      </ul>
+    </div>
+    
+    <div class="project-item">
+      <div class="project-title">NYSDOL UI Modernization - Full Stack Developer</div>
+      <div class="project-client">Client: New York State Department of Labor, USA</div>
+      <div class="project-meta">Technologies: Java, Angular, Spring Boot, MySQL, Jenkins, IBM DB2</div>
+      <ul class="achievement-list">
+        <li>Contributed to modernization of New York State's unemployment insurance portal, serving thousands of citizens daily</li>
+        <li>Developed responsive Angular components integrated with Spring Boot backend services and MySQL databases</li>
+        <li>Led proactive debugging initiatives and comprehensive code review processes, reducing system downtime by 25%</li>
+        <li>Implemented automated testing strategies ensuring high code quality and system reliability</li>
+      </ul>
+    </div>
+    
+    <div class="project-item">
+      <div class="project-title">Virtual Lab Development - Frontend Developer</div>
+      <div class="project-client">Client: Ministry of Education, India (AKTU/IIT Kanpur)</div>
+      <div class="project-meta">Technologies: React.js, JavaScript, Educational Technology Platforms</div>
+      <ul class="achievement-list">
+        <li>Developed interactive React-based virtual laboratory platform used by 10,000+ students across India during COVID-19 pandemic</li>
+        <li>Created engaging educational modules with simulation capabilities for engineering and science subjects</li>
+        <li>Collaborated with academic institutions to ensure platform met educational standards and accessibility requirements</li>
+        <li>Received Gold Developer Certificate for outstanding national contribution under IIT Kanpur and Ministry of Education</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="education-item">
+      <div class="degree">Bachelor of Technology in Information Technology</div>
+      <div class="institution">Dr. A.P.J. Abdul Kalam Technical University, Lucknow | 2018 – 2022 | CGPA: 7.62/10</div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section">
+    <h2 class="section-title">Certifications</h2>
+    <ul class="cert-list">
+      <li>AWS Certified Cloud Practitioner - Amazon Web Services</li>
+      <li>Microsoft Azure Fundamentals (AZ-900) - Microsoft</li>
+    </ul>
+  </section>
+
+  <!-- Achievements & Awards -->
+  <section class="section">
+    <h2 class="section-title">Achievements & Awards</h2>
+    <ul class="award-list">
+      <li>Best Team Award - Tata Consultancy Services (2023)</li>
+      <li>Golden Developer Certificate - IIT Kanpur & Ministry of Education (2021)</li>
+      <li>On-The-Spot Awards (2x) - Tata Consultancy Services (2022, 2023)</li>
+      <li>Published research papers on Association Rule Mining algorithms (Available upon request)</li>
+    </ul>
+  </section>
+</body>
+</html>

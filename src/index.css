@@ -28,19 +28,61 @@ input, textarea {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
+  @apply bg-gray-400 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  @apply bg-gray-500;
 }
 
-/* Smooth transitions for all interactive elements */
-* {
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, 
-              border-color 0.15s ease-in-out, transform 0.15s ease-in-out,
-              box-shadow 0.15s ease-in-out;
+/* Resume page specific animations */
+@keyframes border-pulse {
+  0% { border-color: rgba(37, 99, 235, 0.5); }
+  50% { border-color: rgba(37, 99, 235, 1); }
+  100% { border-color: rgba(37, 99, 235, 0.5); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out;
+}
+
+.hover-lift {
+  transition: transform 0.2s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.border-pulse {
+  animation: border-pulse 2s infinite;
 }
 
 /* Custom gradient backgrounds */

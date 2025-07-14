@@ -1,0 +1,11 @@
+{
+  "name": "resume-pdf-generator",
+  "version": "1.0.0",
+  "description": "Generate ATS-friendly PDF resume from HTML",
+  "scripts": {
+    "generate-pdf": "node generate-pdf.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

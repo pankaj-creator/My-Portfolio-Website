@@ -1,92 +1,113 @@
-# Pankaj Kumar Gond - Portfolio Website
+PANKAJ KUMAR GOND
 
-A modern, professional portfolio website showcasing full-stack development skills, experience, and projects.
-
-## 🚀 Recent Improvements
-
-### Design & User Experience
-- **Modern Hero Section**: Added personal name, clear role positioning, and key metrics
-- **Enhanced Typography**: Implemented Inter font family for better readability
-- **Improved Layout**: Better spacing, modern card designs with gradients and shadows
-- **Professional Color Scheme**: Consistent blue-based color palette with proper contrast
-- **Responsive Design**: Optimized for all device sizes
-
-### Content Optimization for Recruiters
-- **Quantified Achievements**: Added specific metrics (40% performance improvement, 10M+ users, etc.)
-- **Clear Role Progression**: Emphasized leadership experience and technical growth
-- **Project Impact Focus**: Highlighted business impact and technical achievements
-- **Concise Professional Summary**: Brief, impactful descriptions that grab attention
-- **Technology Stack Clarity**: Better organized and categorized technical skills
-
-### Technical Enhancements
-- **Performance Optimizations**: Improved loading times and animations
-- **Better Code Organization**: Cleaner component structure and maintainable code
-- **Enhanced Accessibility**: Proper ARIA labels and semantic HTML
-- **Professional Contact Section**: Improved call-to-action and contact information layout
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React.js, TypeScript, Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Build Tool**: Vite
-- **Deployment**: Ready for Vercel/Netlify
-
-## 🎯 Key Features
-
-### For Recruiters
-- Clear value proposition in hero section
-- Quantified impact metrics throughout
-- Professional project showcase with business outcomes
-- Easy-to-scan technical skills organization
-- Direct contact information and call-to-action
-
-### Technical Excellence
-- Modern React patterns with TypeScript
-- Responsive design with Tailwind CSS
-- Smooth animations and interactions
-- Clean, maintainable code structure
-- Performance-optimized components
-
-## 📊 Project Highlights
-
-1. **GeM 2.0**: Government e-Marketplace (10M+ users)
-2. **Tulip Manufacturing**: 70% automation, 20% efficiency improvement  
-3. **NYSDOL Portal**: 40% performance boost, team leadership
-4. **Virtual Labs**: 10K+ students supported during COVID-19
-
-## 🏆 Recognition
-- Gold Developer Certificate (IIT Kanpur)
-- 2x On-the-Spot Awards (TCS)
-- Best Team Performance Award
-
-## 🚀 Getting Started
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-```
-
-## 🌐 Live Demo
-Visit the portfolio: [Portfolio Website](https://erpankaj.netlify.app)
-
-## 📧 Contact
-
-**Pankaj Kumar Gond**
-- Email: pankajvk211@gmail.com
-- LinkedIn: [pankaj-kumar-gond](https://linkedin.com/in/pankaj-kumar-gond)
-- GitHub: [pankaj-creator](https://github.com/pankaj-creator)
-- Location: New Delhi, India
+📍 New Delhi | 📞 +91 6307386578 | ✉️ pankajvk211@gmail.com  
+🌐 [erpankaj.netlify.app](https://erpankaj.netlify.app) | 💼 [GitHub](https://github.com/pankaj-creator)
 
 ---
 
-*Built with ❤️ using React, TypeScript, and Tailwind CSS*
+## SUMMARY
+
+Full-Stack Developer at TCS with 2+ years of experience building scalable web applications using React.js, Angular, Java, Spring Boot, and CI/CD pipelines on AWS/GCP. Recognized for optimizing performance, improving delivery cycles, and contributing to high-impact government tech platforms.
+
+---
+
+## SKILLS
+
+**Frontend:** React.js, Redux Toolkit, Angular, HTML, CSS, JavaScript  
+**Backend:** Java, Spring Boot, Node.js  **Databases:** MySQL, IBM DB2  
+**DevOps & Cloud:** GitLab CI/CD, Jenkins, SonarQube, Fortify, GCP, AWS  
+**Tools:** Git, GitHub, Postman, Figma, VS Code
+
+---
+
+## EXPERIENCE
+
+**Tata Consultancy Services (TCS)**  
+*System Engineer | Jul 2022 – Present*  
+
+- Led UI development for GeM 2.0's Notification module using React.js + RTK Query.  
+- Built scalable frontend architecture and secured CI/CD workflows via GitLab & Jenkins.  
+- Contributed to NYSDOL portal modernization using Angular & Spring Boot.  
+- Improved API performance by 20%, and reduced downtime by 25%.  
+- Recognized with 2× On-the-Spot Awards and a Best Team Award.
+
+---
+
+## PROJECTS
+
+**GeM 2.0 – Government e-Marketplace**  
+*Senior UI Developer | Dec 2024 – Present*  
+Tech: React.js, Redux Toolkit, GitLab, Jenkins, SonarQube  
+Built a robust notification module with real-time UI, secure deployment, and reusable components.
+
+**NYSDOL UI Modernization**  
+*Frontend Developer | Aug 2022 – Dec 2023*  
+Tech: Angular, Spring Boot, GCP  
+Enhanced performance and accessibility of NY state’s labor portal; led key module delivery.
+
+**Virtual Lab Platform – IIT Kanpur**  
+*Frontend Developer | Jul 2020 – Sept 2020*  
+Tech: React.js  
+Built 3 remote lab simulations during COVID, used by 10,000+ students; earned Gold Developer Certificate.
+
+---
+
+## EDUCATION
+
+**B.Tech – Information Technology**  
+Dr. A.P.J Abdul Kalam Technical University, Lucknow | 2018–2022  
+CGPA: 7.62/10
+
+---
+
+## CERTIFICATIONS & HONORS
+
+AWS Cloud Practitioner | AZ-900 | CNSS Certified  
+2× On-the-Spot Award (TCS) | Best Team Award | Gold Developer Certificate  
+2 Research Papers on Association Rule Mining
+
+---
+
+## PORTFOLIO FEATURES
+
+### 🎯 ATS-Friendly Resume System
+This portfolio includes an optimized resume system designed for maximum ATS (Applicant Tracking System) compatibility:
+
+- **PDF Generation**: Automatically generates ATS-optimized PDF using Puppeteer
+- **Clean Formatting**: Simple, machine-readable layout without graphics or complex formatting
+- **Keyword Optimization**: Strategic placement of relevant technical keywords
+- **Standard Fonts**: Uses web-safe fonts (Inter, Arial) for universal compatibility
+- **Proper Structure**: Semantic HTML structure with clear headings and sections
+
+### 📁 Resume Files
+- `public/Pankaj_Kumar_Gond_Resume.pdf` - ATS-optimized PDF version
+- `public/resume-ats.html` - Clean HTML source for PDF generation
+- `scripts/generate-pdf.js` - Automated PDF generation script
+
+### 🔄 Regenerating Resume
+To update the resume content and regenerate the PDF:
+
+1. Edit the content in `public/resume-ats.html`
+2. Run the generation script:
+   ```bash
+   npm run generate-resume
+   ```
+   or use the platform-specific scripts:
+   ```bash
+   # Windows
+   .\regenerate-resume.bat
+   
+   # Unix/Linux/Mac
+   ./regenerate-resume.sh
+   ```
+
+### 📊 ATS Optimization Features
+- ✅ No headers/footers that ATS systems can't parse
+- ✅ Standard section headings (Experience, Education, Skills)
+- ✅ Clean bullet points and consistent formatting
+- ✅ No images, graphics, or complex tables
+- ✅ Proper text hierarchy with semantic HTML
+- ✅ Keywords placed strategically throughout content
+- ✅ Contact information clearly formatted at the top
+
+This ensures maximum compatibility with modern hiring systems while maintaining professional presentation.
