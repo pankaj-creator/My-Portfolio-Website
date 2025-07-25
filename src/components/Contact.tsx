@@ -102,13 +102,13 @@ const Contact = () => {
                 <Mail className="mr-3" size={20} />
                 pankajvk211@gmail.com
               </a>
-              <a
+              {/* <a
                 href="tel:+918800000000"
                 className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
                 title="Call me"
               >
                 <span>+91 8800000000</span>
-              </a>
+              </a> */}
               <div className="flex items-center text-gray-600">
                 <MapPin className="mr-3" size={20} />
                 New Delhi, India
