@@ -1,9 +1,79 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Calendar, Building2 } from 'lucide-react';
+import { ExternalLink, Calendar, Building2, Github, FileText } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
-const projects = [
+interface ProjectLink {
+  type: 'github' | 'paper' | 'demo';
+  url: string;
+  label: string;
+}
+
+interface Project {
+  title: string;
+  period: string;
+  company: string;
+  role: string;
+  techStack: string[];
+  description: string;
+  keyImpacts: string[];
+  metrics: string;
+  status: string;
+  highlight?: boolean;
+  links?: ProjectLink[];
+}
+
+const projects: Project[] = [
+  {
+    title: 'FocusBuddy – AI-Powered Productivity Platform',
+    period: 'July 2024 – Present',
+    company: 'Personal Project',
+    role: 'Full-Stack Developer & Project Lead',
+    techStack: ['React.js', 'TypeScript', 'Spring Boot', 'Python', 'FastAPI', 'OpenAI API', 'Gemini AI', 'Chrome Extension', 'JWT', 'MongoDB'],
+    description: '🚀 FEATURED PROJECT: Comprehensive AI-powered productivity platform with intelligent task management and smart distraction blocking.',
+    keyImpacts: [
+      'Built scalable microservices architecture with AI service integration',
+      'Developed Chrome extension with Manifest V3 for cross-platform functionality',
+      'Implemented dual AI personality modes for personalized user coaching',
+      'Created real-time progress tracking with advanced analytics dashboard',
+      'Designed secure JWT-based authentication with Spring Security'
+    ],
+    metrics: 'Full-Stack • AI Integration • Cross-Platform',
+    status: 'Development',
+    highlight: true
+  },
+  {
+    title: 'Neural-ARM: AI-Powered Association Rule Mining',
+    period: 'Jan 2021 – Jun 2022',
+    company: 'Academic Research',
+    role: 'Lead Researcher & Developer',
+    techStack: ['Python', 'TensorFlow', 'Keras', 'Jupyter', 'Neural Networks', 'Data Mining'],
+    description: 'Developed an innovative ANN-based approach for accelerated Association Rule Mining with denoising autoencoders, significantly outperforming traditional algorithms.',
+    keyImpacts: [
+      'Achieved significant execution time reduction vs traditional ARM algorithms',
+      'Published 2 peer-reviewed research papers in international journals',
+      'Implemented novel denoising autoencoder architecture for pattern mining',
+      'Maintained high-quality association rules while improving processing speed'
+    ],
+    metrics: '2 Research Publications • Novel Algorithm • Academic Excellence',
+    status: 'Published',
+    links: [
+      { 
+        type: 'github', 
+        url: 'https://github.com/pankaj-creator/Neural-ARM',
+        label: 'View Code'
+      },
+      { 
+        type: 'paper', 
+        url: 'https://www.ijraset.com/research-paper/association-rule-mining-using-fp-growth',
+        label: 'IJRASET Paper'
+      },
+      { 
+        type: 'paper', 
+        url: 'https://www.riverpublishers.com/pdf/ebook/chapter/RP_9788770227667C9.pdf',
+        label: 'River Publishers'
+      }
+    ]
+  },
   {
     title: 'GeM 2.0 – Government e-Marketplace',
     period: 'Dec 2024 – Present',
@@ -17,7 +87,7 @@ const projects = [
       'Achieved 99.9% uptime with robust error handling'
     ],
     metrics: '10M+ users • High-volume transactions',
-    status: 'Production'
+    status: 'Development'
   },
   {
     title: 'Tulip Manufacturing Platform',
@@ -84,13 +154,22 @@ const Projects = () => {
             <AnimatedSection key={index}>
               <motion.div
                 whileHover={{ y: -5 }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
+                  project.highlight ? 'ring-2 ring-blue-500 bg-gradient-to-br from-blue-50 to-white' : ''
+                }`}
               >
+                {project.highlight && (
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2">
+                    <span className="text-sm font-semibold">⭐ FEATURED PROJECT ⭐</span>
+                  </div>
+                )}
                 <div className="p-6">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <h3 className={`text-xl font-bold mb-2 ${
+                        project.highlight ? 'text-blue-900' : 'text-gray-900'
+                      }`}>
                         {project.title}
                       </h3>
                       <div className="flex items-center text-sm text-gray-600 mb-2">
@@ -106,6 +185,7 @@ const Projects = () => {
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                       project.status === 'Production' ? 'bg-green-100 text-green-800' :
+                      project.status === 'Development' ? 'bg-orange-100 text-orange-800' :
                       project.status === 'Live' ? 'bg-blue-100 text-blue-800' :
                       'bg-gray-100 text-gray-800'
                     }`}>
@@ -139,7 +219,7 @@ const Projects = () => {
                   </div>
 
                   {/* Tech Stack */}
-                  <div>
+                  <div className={project.links ? "mb-4" : ""}>
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.map((tech, i) => (
@@ -152,6 +232,37 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
+
+                  {/* Project Links */}
+                  {project.links && (
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2 text-sm">Links:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.links.map((link, i) => (
+                          <motion.a
+                            key={i}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className={`inline-flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                              link.type === 'github' 
+                                ? 'bg-gray-900 text-white hover:bg-gray-800'
+                                : link.type === 'paper'
+                                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                                : 'bg-green-600 text-white hover:bg-green-700'
+                            }`}
+                          >
+                            {link.type === 'github' && <Github size={12} className="mr-1" />}
+                            {link.type === 'paper' && <FileText size={12} className="mr-1" />}
+                            {link.type === 'demo' && <ExternalLink size={12} className="mr-1" />}
+                            {link.label}
+                          </motion.a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             </AnimatedSection>

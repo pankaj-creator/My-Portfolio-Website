@@ -1,16 +1,67 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Calendar, Building2 } from 'lucide-react';
+import { ExternalLink, Calendar, Building2, Github, FileText } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
-const projects = [
+interface ProjectLink {
+  type: 'github' | 'paper' | 'demo';
+  url: string;
+  label: string;
+}
+
+interface Project {
+  title: string;
+  period: string;
+  company: string;
+  role: string;
+  techStack: string[];
+  description: string;
+  keyImpacts: string[];
+  metrics: string;
+  status: string;
+  links?: ProjectLink[];
+}
+
+const projects: Project[] = [
+  {
+    title: 'Neural-ARM: AI-Powered Association Rule Mining',
+    period: 'Jan 2021 – Jun 2022',
+    company: 'Academic Research',
+    role: 'Lead Researcher & Developer',
+    techStack: ['Python', 'TensorFlow', 'Keras', 'Jupyter', 'Neural Networks', 'Data Mining'],
+    description: 'Developed an innovative ANN-based approach for accelerated Association Rule Mining with denoising autoencoders, significantly outperforming traditional algorithms.',
+    keyImpacts: [
+      'Achieved significant execution time reduction vs traditional ARM algorithms',
+      'Published 2 peer-reviewed research papers in international journals',
+      'Implemented novel denoising autoencoder architecture for pattern mining',
+      'Maintained high-quality association rules while improving processing speed'
+    ],
+    metrics: '2 Research Publications • Novel Algorithm • Academic Excellence',
+    status: 'Published',
+    links: [
+      { 
+        type: 'github', 
+        url: 'https://github.com/pankaj-creator/Neural-ARM',
+        label: 'View Code'
+      },
+      { 
+        type: 'paper', 
+        url: 'https://www.ijraset.com/research-paper/association-rule-mining-using-fp-growth',
+        label: 'Research Paper 1'
+      },
+      { 
+        type: 'paper', 
+        url: 'https://www.riverpublishers.com/pdf/ebook/chapter/RP_9788770227667C9.pdf',
+        label: 'Research Paper 2'
+      }
+    ]
+  },
   {
     title: 'GeM 2.0 – Government e-Marketplace',
     period: 'Dec 2024 – Present',
     company: 'TCS',
     role: 'Senior UI Developer',
     techStack: ['React.js', 'Redux Toolkit', 'GitLab', 'Jenkins', 'CI/CD'],
-    description: 'Leading UI development for India's national procurement platform serving millions of users.',
+    description: "Leading UI development for India's national procurement platform serving millions of users.",
     keyImpacts: [
       'Built real-time notification system for government procurement',
       'Implemented CI/CD pipelines reducing deployment time by 50%',
@@ -139,7 +190,7 @@ const Projects = () => {
                   </div>
 
                   {/* Tech Stack */}
-                  <div>
+                  <div className={project.links ? "mb-4" : ""}>
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.map((tech, i) => (
@@ -152,6 +203,37 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
+
+                  {/* Project Links */}
+                  {project.links && (
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2 text-sm">Links:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.links.map((link, i) => (
+                          <motion.a
+                            key={i}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className={`inline-flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                              link.type === 'github' 
+                                ? 'bg-gray-900 text-white hover:bg-gray-800'
+                                : link.type === 'paper'
+                                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                                : 'bg-green-600 text-white hover:bg-green-700'
+                            }`}
+                          >
+                            {link.type === 'github' && <Github size={12} className="mr-1" />}
+                            {link.type === 'paper' && <FileText size={12} className="mr-1" />}
+                            {link.type === 'demo' && <ExternalLink size={12} className="mr-1" />}
+                            {link.label}
+                          </motion.a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             </AnimatedSection>

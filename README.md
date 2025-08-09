@@ -1,6 +1,31 @@
 PANKAJ KUMAR GOND
 
-📍 New Delhi | 📞 +91 6307386578 | ✉️ pankajvk211@gmail.com  
+📍 New Delhi |## PROJECTS
+
+**Neural-ARM: AI-Powered Associ## CERTIFICATIONS & HONORS
+
+AWS Cloud Practitioner | AZ-900 | CNSS Certified  
+2× On-the-Spot Award (TCS) | Best Team Award | Gold Developer Certificate  
+**Research Publications:**
+- [Association Rule Mining using FP-Growth and ANN Techniques (IJRASET, 2022)](https://www.ijraset.com/research-paper/association-rule-mining-using-fp-growth)
+- [Advanced Techniques in Association Rule Mining (River Publishers, 2022)](https://www.riverpublishers.com/pdf/ebook/chapter/RP_9788770227667C9.pdf) Rule Mining**  
+*Lead Researcher & Developer | Jan 2021 – Jun 2022*  
+Tech: Python, TensorFlow, Keras, Neural Networks, Data Mining  
+Developed innovative ANN-based approach for accelerated ARM with denoising autoencoders. Published 2 peer-reviewed research papers demonstrating significant performance improvements over traditional algorithms.
+
+**GeM 2.0 – Government e-Marketplace**  
+*Senior UI Developer | Dec 2024 – Present*  
+Tech: React.js, Redux Toolkit, GitLab, Jenkins, SonarQube  
+Built a robust notification module with real-time UI, secure deployment, and reusable components.
+
+**NYSDOL UI Modernization**  
+*Frontend Developer | Aug 2022 – Dec 2023*  
+Tech: Angular, Spring Boot, GCP  
+Enhanced performance and accessibility of NY state's labor portal; led key module delivery.
+
+**Virtual Lab Platform – IIT Kanpur**  
+*Frontend Developer | Jul 2020 – Sept 2020*  
+Tech: React.js  578 | ✉️ pankajvk211@gmail.com  
 🌐 [erpankaj.netlify.app](https://erpankaj.netlify.app) | 💼 [GitHub](https://github.com/pankaj-creator)
 
 ---
@@ -94,9 +119,6 @@ To update the resume content and regenerate the PDF:
    ```
    or use the platform-specific scripts:
    ```bash
-   # Windows
-   .\regenerate-resume.bat
-   
    # Unix/Linux/Mac
    ./regenerate-resume.sh
    ```

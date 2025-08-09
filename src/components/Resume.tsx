@@ -252,7 +252,31 @@ const Resume = () => {
                   </li>
                   <li className="flex items-start">
                     <FileText size={18} className="mr-2 text-blue-600 mt-1 flex-shrink-0" />
-                    <span>Published research papers on Association Rule Mining</span>
+                    <div>
+                      <span>Published research papers on Association Rule Mining:</span>
+                      <div className="ml-6 mt-1 space-y-1">
+                        <div>
+                          <a 
+                            href="https://www.ijraset.com/research-paper/association-rule-mining-using-fp-growth"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 underline text-sm"
+                          >
+                            • IJRASET (2022) - FP-Growth & ANN Techniques
+                          </a>
+                        </div>
+                        <div>
+                          <a 
+                            href="https://www.riverpublishers.com/pdf/ebook/chapter/RP_9788770227667C9.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 underline text-sm"
+                          >
+                            • River Publishers (2022) - Advanced ARM Techniques
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </motion.div>

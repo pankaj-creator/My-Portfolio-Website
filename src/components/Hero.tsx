@@ -22,7 +22,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-2xl md:text-3xl font-semibold text-blue-600 mb-4"
           >
-            Senior Full Stack Developer
+            Full Stack Developer | AI Enthusiast
           </motion.h2>
           
           <motion.p
@@ -31,9 +31,9 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
           >
-            3+ years at TCS • React.js & Java Expert • Cloud Technologies Specialist
+            3+ years at TCS • Full Stack • AI Integration • Cloud & DevOps
             <br />
-            Building scalable applications that drive business growth and user engagement
+            Building intelligent applications with cutting-edge technologies and scalable architectures
           </motion.p>
           
           <motion.div

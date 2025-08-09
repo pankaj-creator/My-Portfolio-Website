@@ -19,10 +19,15 @@ const About = () => {
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Professional Summary</h3>
               <p className="text-gray-600 mb-4">
-                Senior Full Stack Developer with 3+ years at Tata Consultancy Services, 
-                specializing in React.js, Angular, and cloud technologies. Led high-impact 
-                projects including India's national procurement platform (GeM 2.0) and 
-                manufacturing automation systems.
+                Full Stack Developer with 3+ years at Tata Consultancy Services, specializing in 
+                end-to-end application development with expertise in AI integration, Cloud technologies, 
+                and DevOps practices. Currently leading high-impact projects including India's national 
+                procurement platform (GeM 2.0) and developing innovative AI-powered productivity solutions.
+              </p>
+              <p className="text-gray-600 mb-4">
+                Passionate about leveraging cutting-edge technologies including AI/ML, cloud platforms, 
+                and DevOps methodologies to build scalable, intelligent solutions. Strong interest in 
+                DevOps automation, cloud architecture, and artificial intelligence applications.
               </p>
             </div>
             
@@ -30,15 +35,17 @@ const About = () => {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Key Strengths</h4>
                 <ul className="text-gray-600 space-y-1 text-sm">
-                  <li>• Frontend Performance Optimization</li>
+                  <li>• Full-Stack Development</li>
+                  <li>• AI/ML Integration</li>
+                  <li>• Cloud Architecture & DevOps</li>
                   <li>• Team Leadership & Mentoring</li>
-                  <li>• CI/CD Pipeline Implementation</li>
-                  <li>• Cross-functional Collaboration</li>
+                  <li>• Performance Optimization</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Impact Delivered</h4>
                 <ul className="text-gray-600 space-y-1 text-sm">
+                  <li>• AI-powered productivity platforms</li>
                   <li>• 40% performance improvements</li>
                   <li>• 30% reduction in downtime</li>
                   <li>• 70% automation of manual tasks</li>
