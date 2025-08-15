@@ -25,7 +25,7 @@ Enhanced performance and accessibility of NY state's labor portal; led key modul
 
 **Virtual Lab Platform – IIT Kanpur**  
 *Frontend Developer | Jul 2020 – Sept 2020*  
-Tech: React.js  578 | ✉️ pankajvk211@gmail.com  
+Tech: Html, Css, JavaScript  578 | ✉️ pankajvk211@gmail.com  
 🌐 [erpankaj.netlify.app](https://erpankaj.netlify.app) | 💼 [GitHub](https://github.com/pankaj-creator)
 
 ---
@@ -72,7 +72,7 @@ Enhanced performance and accessibility of NY state’s labor portal; led key mod
 
 **Virtual Lab Platform – IIT Kanpur**  
 *Frontend Developer | Jul 2020 – Sept 2020*  
-Tech: React.js  
+Tech: Html, Css, JavaScript  
 Built 3 remote lab simulations during COVID, used by 10,000+ students; earned Gold Developer Certificate.
 
 ---

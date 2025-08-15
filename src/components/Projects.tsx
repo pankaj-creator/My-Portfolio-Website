@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Calendar, Building2, Github, FileText } from 'lucide-react';
+import { ExternalLink, Calendar, Building2, Github, FileText, Globe, Award, Eye } from 'lucide-react';
+import { useState } from 'react';
 import AnimatedSection from './AnimatedSection';
+import ModalView from './ModalView';
 
 interface ProjectLink {
-  type: 'github' | 'paper' | 'demo';
+  type: 'github' | 'paper' | 'demo' | 'view' | 'Certificate' | 'Award';
   url: string;
   label: string;
 }
@@ -38,13 +40,13 @@ const projects: Project[] = [
       'Designed secure JWT-based authentication with Spring Security'
     ],
     metrics: 'Full-Stack • AI Integration • Cross-Platform',
-    status: 'Development',
+    status: 'Under Development',
     highlight: true
   },
   {
     title: 'Neural-ARM: AI-Powered Association Rule Mining',
     period: 'Jan 2021 – Jun 2022',
-    company: 'Academic Research',
+    company: 'Academic Research Project - AKTU',
     role: 'Lead Researcher & Developer',
     techStack: ['Python', 'TensorFlow', 'Keras', 'Jupyter', 'Neural Networks', 'Data Mining'],
     description: 'Developed an innovative ANN-based approach for accelerated Association Rule Mining with denoising autoencoders, significantly outperforming traditional algorithms.',
@@ -57,19 +59,20 @@ const projects: Project[] = [
     metrics: '2 Research Publications • Novel Algorithm • Academic Excellence',
     status: 'Published',
     links: [
-      { 
-        type: 'github', 
+      {
+        type: 'github',
         url: 'https://github.com/pankaj-creator/Neural-ARM',
         label: 'View Code'
       },
-      { 
-        type: 'paper', 
+      {
+        type: 'paper',
         url: 'https://www.ijraset.com/research-paper/association-rule-mining-using-fp-growth',
         label: 'IJRASET Paper'
       },
-      { 
-        type: 'paper', 
-        url: 'https://www.riverpublishers.com/pdf/ebook/chapter/RP_9788770227667C9.pdf',
+      {
+        type: 'paper',
+        url: 'certificates/RP_9788770227667C9.pdf',
+        // downloadUrl: 'https://www.riverpublishers.com/pdf/ebook/chapter/RP_9788770227667C9.pdf',
         label: 'River Publishers'
       }
     ]
@@ -102,7 +105,13 @@ const projects: Project[] = [
       'Integrated 5+ manufacturing systems seamlessly'
     ],
     metrics: '30% less downtime • 5 systems integrated',
-    status: 'Completed'
+    status: 'Completed',
+    links: [{
+      type: 'Award',
+      url: '/certificates/On_The_Spot_Award_Bayer.pdf',
+      label: 'On-the-Spot Award'
+    }
+    ]
   },
   {
     title: 'NY State Department of Labor Portal',
@@ -117,14 +126,20 @@ const projects: Project[] = [
       'Delivered releases 15% ahead of schedule'
     ],
     metrics: '2x On-the-Spot Awards • 40% performance gain',
-    status: 'Completed'
+    status: 'Completed',
+    links: [{
+      type: 'Award',
+      url: '/certificates/On_The_Spot_Award_NYSDOL.pdf',
+      label: 'On-the-Spot Award'
+    }
+    ]
   },
   {
     title: 'Virtual Lab Development',
     period: 'July 2020 – Sept 2020',
-    company: 'IIT Kanpur',
-    role: 'React Developer',
-    techStack: ['React.js', 'GitHub Pages', 'Interactive UI'],
+    company: 'Academic Project - IIT Kanpur',
+    role: 'Web Application Developer',
+    techStack: ['Html/css', 'JavaScript', 'GitHub Pages', 'Interactive UI'],
     description: 'Built online laboratory experiments during COVID-19 for remote engineering education.',
     keyImpacts: [
       'Supported 10,000+ students during pandemic',
@@ -132,11 +147,70 @@ const projects: Project[] = [
       'Deployed using GitHub Pages for scalability'
     ],
     metrics: '10K+ students • Gold Certificate',
-    status: 'Live'
+    status: 'Live',
+    links: [
+      {
+        type: 'github',
+        url: 'https://github.com/pankaj-creator/Virtual_Lab_Development',
+        label: 'View Code'
+      },
+      {
+        type: 'view',
+        url: 'https://virtuallabsdev.netlify.app/',
+        label: 'Click to View'
+      },
+      {
+        type: 'Award',
+        url: '/certificates/GOLD_DEVELOPER_CERTIFICATE_eB3.png',
+        label: 'Gold Developer Certificate'
+      }
+    ]
   }
 ];
 
 const Projects = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedModal, setSelectedModal] = useState<{
+    title: string;
+    content: {
+      type: 'pdf' | 'image' | 'link';
+      url: string;
+      description?: string;
+    };
+    details?: {
+      organization?: string;
+      year?: string;
+      description?: string;
+    };
+  } | null>(null);
+
+  const openModal = (link: ProjectLink, projectTitle: string) => {
+    let contentType: 'pdf' | 'image' | 'link' = 'link';
+
+    if (link.url.endsWith('.pdf')) {
+      contentType = 'pdf';
+    } else if (link.url.endsWith('.png') || link.url.endsWith('.jpg') || link.url.endsWith('.jpeg')) {
+      contentType = 'image';
+    }
+
+    setSelectedModal({
+      title: `${projectTitle} - ${link.label}`,
+      content: {
+        type: contentType,
+        url: link.url,
+        description: `${link.label} for ${projectTitle}`
+      },
+      details: {
+        description: `This is ${link.label.toLowerCase()} related to the ${projectTitle} project.`
+      }
+    });
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedModal(null);
+  };
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,9 +228,8 @@ const Projects = () => {
             <AnimatedSection key={index}>
               <motion.div
                 whileHover={{ y: -5 }}
-                className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
-                  project.highlight ? 'ring-2 ring-blue-500 bg-gradient-to-br from-blue-50 to-white' : ''
-                }`}
+                className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${project.highlight ? 'ring-2 ring-blue-500 bg-gradient-to-br from-blue-50 to-white' : ''
+                  }`}
               >
                 {project.highlight && (
                   <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2">
@@ -167,9 +240,8 @@ const Projects = () => {
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className={`text-xl font-bold mb-2 ${
-                        project.highlight ? 'text-blue-900' : 'text-gray-900'
-                      }`}>
+                      <h3 className={`text-xl font-bold mb-2 ${project.highlight ? 'text-blue-900' : 'text-gray-900'
+                        }`}>
                         {project.title}
                       </h3>
                       <div className="flex items-center text-sm text-gray-600 mb-2">
@@ -183,12 +255,14 @@ const Projects = () => {
                         {project.period}
                       </div>
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      project.status === 'Production' ? 'bg-green-100 text-green-800' :
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${project.status === 'Production' ? 'bg-green-100 text-green-800' :
                       project.status === 'Development' ? 'bg-orange-100 text-orange-800' :
-                      project.status === 'Live' ? 'bg-blue-100 text-blue-800' :
-                      'bg-gray-100 text-gray-800'
-                    }`}>
+                        project.status === 'Live' ? 'bg-blue-100 text-blue-800' :
+                          project.status === 'Completed' ? 'bg-green-100 text-green-800' :
+                            project.status === 'Published' ? 'bg-purple-100 text-purple-800' :
+                              project.status === 'Under Development' ? 'bg-yellow-100 text-yellow-800' :
+                                'bg-gray-100 text-gray-800'
+                      }`}>
                       {project.status}
                     </span>
                   </div>
@@ -239,26 +313,44 @@ const Projects = () => {
                       <h4 className="font-semibold text-gray-900 mb-2 text-sm">Links:</h4>
                       <div className="flex flex-wrap gap-2">
                         {project.links.map((link, i) => (
-                          <motion.a
-                            key={i}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className={`inline-flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
-                              link.type === 'github' 
-                                ? 'bg-gray-900 text-white hover:bg-gray-800'
-                                : link.type === 'paper'
-                                ? 'bg-blue-600 text-white hover:bg-blue-700'
-                                : 'bg-green-600 text-white hover:bg-green-700'
-                            }`}
-                          >
-                            {link.type === 'github' && <Github size={12} className="mr-1" />}
-                            {link.type === 'paper' && <FileText size={12} className="mr-1" />}
-                            {link.type === 'demo' && <ExternalLink size={12} className="mr-1" />}
-                            {link.label}
-                          </motion.a>
+                          <div key={i}>
+                            {(link.type === 'Award' || link.type === 'Certificate' ||
+                              (link.url.endsWith('.pdf') || link.url.endsWith('.png') ||
+                                link.url.endsWith('.jpg') || link.url.endsWith('.jpeg'))) ? (
+                              <motion.button
+                                onClick={() => openModal(link, project.title)}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className={`inline-flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${link.type === 'Award' || link.type === 'Certificate'
+                                  ? 'bg-amber-600 text-white hover:bg-amber-700'
+                                  : 'bg-purple-600 text-white hover:bg-purple-700'
+                                  }`}
+                              >
+                                <Eye size={12} className="mr-1" />
+                                View {link.label}
+                              </motion.button>
+                            ) : (
+                              <motion.a
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className={`inline-flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${link.type === 'github'
+                                  ? 'bg-gray-900 text-white hover:bg-gray-800'
+                                  : link.type === 'paper'
+                                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                                    : 'bg-green-600 text-white hover:bg-green-700'
+                                  }`}
+                              >
+                                {link.type === 'github' && <Github size={12} className="mr-1" />}
+                                {link.type === 'view' && <Globe size={12} className="mr-1" />}
+                                {link.type === 'paper' && <FileText size={12} className="mr-1" />}
+                                {link.type === 'demo' && <ExternalLink size={12} className="mr-1" />}
+                                {link.label}
+                              </motion.a>
+                            )}
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -286,6 +378,17 @@ const Projects = () => {
             </motion.a>
           </div>
         </AnimatedSection>
+
+        {/* Modal View for Certificates and Documents */}
+        {selectedModal && (
+          <ModalView
+            isOpen={modalOpen}
+            onClose={closeModal}
+            title={selectedModal.title}
+            content={selectedModal.content}
+            details={selectedModal.details}
+          />
+        )}
       </div>
     </section>
   );

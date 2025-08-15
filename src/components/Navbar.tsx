@@ -28,7 +28,6 @@ const Navbar = () => {
     'Skills',
     'Projects',
     'Resume',
-    'Awards',
     'Additional',
     'Contact',
   ];
